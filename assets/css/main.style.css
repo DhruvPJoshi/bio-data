@@ -1,0 +1,41 @@
+.profile-pic {
+  display: block;
+  width: 50%;
+  max-width: 180px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid white;
+  border-radius: 50%;
+}
+
+.profile-name {
+  text-align: center;
+  color: white;
+}
+
+.cd-timeline-purple {
+  background-color: rebeccapurple !important;
+}
+
+.cd-timeline__img img {
+  width: 60% !important;
+  height: 60% !important;
+}
+
+.cd-timeline__date {
+  color: white;
+  font-family: sans-serif;
+}
+
+@media screen and (max-width: 1023px) {
+  .cd-timeline__date {
+    color: #332f2f;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .profile-pic {
+    max-width: 150px;
+  }
+}
