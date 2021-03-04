@@ -7,13 +7,13 @@
 
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/main.style.css" />
-
-    <script src="./assets/lib/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
   </head>
 
   <body>
     <section class="cd-timeline js-cd-timeline cd-timeline-purple">
-      <img src="./assets/images/profile-pic.jpg" alt="Profile" class="profile-pic" />
+      <a href="#img-gallery" rel="modal:open"><img src="./assets/images/profile-pic.jpg" alt="Profile" class="profile-pic" /></a>
 
       <h2 class="profile-name">Dhruv Joshi</h2>
 
@@ -136,5 +136,33 @@
         </div>
       </div>
     </section>
+
+    <div class="modal splide" id="img-gallery">
+      <div class="splide__track">
+	      <ul class="splide__list">
+		      <li class="splide__slide"><img src="./assets/images/dj-img1.jpg" /></li>
+		      <li class="splide__slide"><img src="./assets/images/dj-img2.jpg" /></li>
+		      <li class="splide__slide"><img src="./assets/images/dj-img3.jpg" /></li>
+		      <li class="splide__slide"><img src="./assets/images/dj-img4.jpg" /></li>
+		      <li class="splide__slide"><img src="./assets/images/dj-img5.jpg" /></li>
+	      </ul>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script src="./assets/lib/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        new Splide('.splide', {
+          cover: true,
+          focus: 'bottom',
+          fixedWidth: 300,
+          fixedHeight: 600,
+          gap: '3rem'
+        }).mount();
+      });
+    </script>
   </body>
 </html>
