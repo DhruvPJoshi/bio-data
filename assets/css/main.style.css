@@ -1,10 +1,10 @@
 .profile-pic {
   display: block;
-  width: 50%;
+  width: 100%;
   max-width: 180px;
   height: auto;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: -4.5em;
   border: 5px solid white;
   border-radius: 50%;
 }
@@ -28,6 +28,32 @@
   font-family: sans-serif;
 }
 
+#img-profile {
+  width: 50%;
+}
+
+#img-clickhere {
+  flex-grow: 1;
+  padding-left: 5em;
+}
+
+#img-clickhere img {
+  width: 50px;
+  position: absolute;
+  top: 5em;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Brush Script MT', cursive;
+}
+
+#img-clickhere span {
+  display: block;
+  margin-top: 6em;
+}
+
 @media screen and (max-width: 1023px) {
   .cd-timeline__date {
     color: #332f2f;
@@ -37,5 +63,13 @@
 @media screen and (max-width: 639px) {
   .profile-pic {
     max-width: 150px;
+  }
+
+  #img-clickhere img {
+    top: 4em;
+  }
+
+  #img-clickhere span {
+    margin-top: 5em;
   }
 }
